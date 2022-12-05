@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content><br>
+  <ion-img src="https://venecia.com.co/wp-content/uploads/2019/09/venecia-footer.png" alt=""></ion-img>
+
+  <form [formGroup]="formLogin" (submit)="PostLogin()" action="">
+    <ion-item lines="full">
+      <ion-label position="floating">Identificación</ion-label>
+      <ion-input type="text"  formControlName="identification" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Iniciar Sesión</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

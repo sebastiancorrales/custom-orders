@@ -1,0 +1,32 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{customOrder["store_id"]}} - {{customOrder["id"]}}</ion-card-title>
+    <ion-card-subtitle>{{customOrder["hostname"]}}</ion-card-subtitle>
+    <ion-card-subtitle>{{customOrder["date"]}} - {{customOrder["date_out"]}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Tienda</ion-col><ion-col>{{customOrder["hostname"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Cliente</ion-col><ion-col>{{customOrder["concat"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Fecha de entrega</ion-col><ion-col>{{customOrder["date_out"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Hora de entrega</ion-col><ion-col>{{customOrder["hour_out"]}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Estado</ion-col><ion-col>{{customOrder["status"]}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+
+  <!-- <div class="container">
+    <code *ngIf="result"> {{ result }} </code>
+  </div> -->
+  <ion-button  fill="clear" (click)="setStatusCustomOrder(customOrder['store_id'], customOrder['id'])">Opciones</ion-button>
+  <ion-button fill="clear" (click)="getDetailCustomOrder(customOrder['id'], customOrder['store_id'])">Detalles</ion-button>
+</ion-card>
